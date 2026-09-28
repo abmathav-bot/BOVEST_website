@@ -1,0 +1,379 @@
+/* App.css - Natural Farm Theme (Wix wh-1219 Inspired) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color: #4A4A4A;
+  line-height: 1.8;
+  background-color: #F8F5F0; /* Warm beige background */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: #2F3E2E; /* Deep olive green */
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 6%;
+  background-color: rgba(255, 255, 255, 0.85); /* White and translucent */
+  backdrop-filter: blur(8px);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2F3E2E;
+  letter-spacing: 2px;
+}
+
+.navbar-logo {
+  height: 100px;
+  width: auto;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  display: block;
+}
+
+.footer-logo {
+  height: 120px;
+  width: auto;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  display: block;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2F3E2E;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #8C9970;
+}
+
+.nav-cta {
+  background-color: #2F3E2E;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-cta:hover {
+  background-color: #8C9970;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(47, 62, 46, 0.4), rgba(47, 62, 46, 0.6)), url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin-top: 5rem; /* offset for navbar */
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+  color: #FFFFFF;
+  line-height: 1.1;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  color: #E8E8E8;
+}
+
+.cta-button {
+  background-color: #8C9970; /* Muted natural green */
+  color: white;
+  border: none;
+  padding: 1.2rem 3rem;
+  font-size: 1rem;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #6C7A52;
+}
+
+/* General Section */
+.section {
+  padding: 8rem 8%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-header {
+  margin-bottom: 4rem;
+}
+
+.section h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #7A7A7A;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+}
+
+.bg-light {
+  background-color: #F8F5F0;
+}
+
+.bg-dark {
+  background-color: #2F3E2E;
+}
+
+.light-text h2, .light-text .subtitle {
+  color: #FFFFFF;
+}
+
+.light-text .subtitle {
+  color: #C0C8B6;
+}
+
+/* About Grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  box-shadow: 15px 15px 0px #8C9970;
+}
+
+/* Cards (Who is it for) */
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+.investor-img {
+  background-image: url('https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); /* Finance/Investment */
+}
+
+.farmer-img {
+  background-image: url('https://images.unsplash.com/photo-1595841696677-6489ff3f8cd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); /* Farmer */
+}
+
+.card-content {
+  padding: 3rem 2.5rem;
+  text-align: center;
+}
+
+.card-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Steps (How it works) */
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.step {
+  text-align: center;
+  padding: 2rem;
+  background-color: #FFFFFF;
+  border: 1px solid #EBE4D5;
+}
+
+.step-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #8C9970;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.step h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #1A231A;
+  color: #FFFFFF;
+  padding: 5rem 8% 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2F3E2E;
+  padding-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+
+.footer-brand h2 {
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.footer-brand p {
+  color: #8C9970;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links a {
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.footer-links a:hover {
+  color: #8C9970;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #7A7A7A;
+}
+
+@media (max-width: 900px) {
+  .about-grid, .cards-container, .steps-container, .rules-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+  .nav-links {
+    display: none;
+  }
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  .section {
+    padding: 4rem 5%;
+  }
+  .bonus-section {
+    padding: 2rem 1.5rem !important;
+  }
+  .bonus-section h2 {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .navbar-logo {
+    height: 70px; /* scale down on mobile */
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
