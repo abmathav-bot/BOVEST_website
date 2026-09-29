@@ -351,6 +351,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 900px) {
+  [data-aos="fade-left"],
+  [data-aos="fade-right"] {
+    transform: none !important;
+  }
   .about-grid, .cards-container, .steps-container, .rules-grid {
     grid-template-columns: 1fr;
   }
