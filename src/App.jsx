@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import ProfitCalculator from './ProfitCalculator';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -20,13 +22,26 @@ function App() {
         <div className="logo" style={{display: 'flex', alignItems: 'center'}}>
           <img src="/logo.png" alt="Bovest Logo" className="navbar-logo" />
         </div>
-        <ul className="nav-links">
-          <li><a href="#about">The Model</a></li>
-          <li><a href="#transparency">Transparency</a></li>
-          <li><a href="#profit">How It Works</a></li>
-          <li><a href="#calculator">Profit Calculator</a></li>
-        </ul>
-        <button className="nav-cta">Start Investing</button>
+        <div className={`nav-menu${isMenuOpen ? ' is-open' : ''}`}>
+          <ul className="nav-links">
+            <li><a href="#about" onClick={() => setIsMenuOpen(false)}>The Model</a></li>
+            <li><a href="#transparency" onClick={() => setIsMenuOpen(false)}>Transparency</a></li>
+            <li><a href="#profit" onClick={() => setIsMenuOpen(false)}>How It Works</a></li>
+            <li><a href="#calculator" onClick={() => setIsMenuOpen(false)}>Profit Calculator</a></li>
+          </ul>
+          <button className="nav-cta">Start Investing</button>
+        </div>
+        <button
+          className={`nav-toggle${isMenuOpen ? ' is-open' : ''}`}
+          type="button"
+          aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </nav>
 
       {/* Hero Section */}
@@ -117,7 +132,7 @@ function App() {
           </p>
         </div>
 
-        <div className="rules-grid" style={{marginTop: '5rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem'}}>
+        <div className="rules-grid" style={{marginTop: '5rem'}}>
            <div className="rule-box" data-aos="fade-right">
              <h3>Lock-In & Refunds</h3>
              <p>Investments lock in for 5 years to ensure farm stability. Exit policies are clear:</p>
